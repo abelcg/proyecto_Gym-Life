@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Blog de fitness, gym y nutrición" />
+    <meta
+      name="keywords"
+      content="gym, fitness, nutrición, workout, ejercicio físico"
+    />
+    <meta
+      name="author"
+      content="Córdoba González Abel Ezequiel,
+                   Damaré Nelly Georgina, 
+                   Navarro Luciano,
+                   Villafañe Gonzalo Martin"
+    />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link
+      rel="shortcut icon"
+      href="/img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- script de fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/844be37ca0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script de jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <title>Gym Life - Fitness Club</title>
+  </head>
+  <body>
+    <header>
+      <!-- navbar -->
+      <nav
+        class="
+          navbar navbar-expand-lg navbar-dark
+          bg-dark
+          fixed-top
+          pb-4
+          d-flex
+          flex-column
+        "
+      >
+        <!-- topbar -->
+        <div class="container justify-content-end">
+          <ul class="nav">
+            <li class="nav-item fs-4">
+              <a
+                class="nav-link active"
+                id="login-btn"
+                aria-current="page"
+                href="/pages/login.html"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item fs-4">
+              <a
+                class="btn btn-primary btn-lg fw-bold rounded-0"
+                id="btn-suscribite"
+                data-bs-toggle="modal"
+                data-bs-target="#ModalSuscripcion"
+                >SUSCRIBITE</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- fin del topbar -->
+        <div class="container">
+          <div>
+            <a class="navbar-brand" href="/index.html">
+              <img
+                src="/img/Gym-Life_Logo.png"
+                alt="Logo Gym Life Fitness club"
+                width="240"
+                height="auto"
+            /></a>
+          </div>
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSidebar"
+            aria-controls="navbarSidebar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="icon-bar top-bar m-1"></span>
+            <span class="icon-bar middle-bar m-1"></span>
+            <span class="icon-bar bottom-bar m-1"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSidebar">
+            <ul class="navbar-nav ms-auto mb-3 mb-lg-1 fs-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active barraNav-link"
+                  aria-current="page"
+                  href="/index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link barraNav-link" href="/pages/contacto.html"
+                  >Contacto</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link barraNav-link"
+                  href="/pages/acerca_de_nosotros.html"
+                  >Acerca de nosotros</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-dark fs-5"
+                  id="login-cel"
+                  href="/pages/login.html"
+                  >Login</a
+                >
+                <a
+                  class="nav-link text-dark"
+                  id="subscribe-cel"
+                  data-bs-toggle="modal"
+                  data-bs-target="#ModalSuscripcion"
+                  >SUSCRIBITE</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Slider -->
+      <div
+        id="Slider"
+        class="carousel carousel-dark slide carousel-fade mb-5"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#Slider"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#Slider"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#Slider"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img
+              src="/img/slide-1.jpg"
+              class="d-block w-100"
+              alt="Hombre levantando mancuerna en el gym"
+            />
+            <div class="carousel-caption d-sm-block">
+                <div class="mb-5">
+                  <h4 class="fs-md-1 fs-1">Más Saludable</h4>
+                  <p class="fs-md-1 fs-1">Energizá tu vida</p>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#ModalSuscripcion"
+                    class="btn btn-outline-primary btn-slider fs-md-1 fs-1 w-auto h-auto fw-bold mb-4"
+                    >ÚNETENOS</button
+                  >
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5500">
+            <img
+              src="/img/slide-2.jpg"
+              class="d-block w-100"
+              alt="Mujer ejercitando en piernas"
+            />
+            <div class="carousel-caption d-md-block">
+                <div class="mb-5">
+                  <h4 class="fs-md-1 fs-1">Ejercítate</h4>
+                  <p class="fs-md-1 fs-1">
+                    sé fuerte <br />
+                    mantente en forma
+                  </p>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/img/slide-3.jpg"
+              class="d-block w-100"
+              alt="Mujeer haciendo crossfit"
+            />
+            <div class="carousel-caption d-md-block">
+                <div class="mb-5">
+                  <h4 class="fs-md-1 fs-1">Fitness</h4>
+                  <p class="fs-md-1 fs-1">Transformá tu cuerpo</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#Slider"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#Slider"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- fin Slider -->
+      <section class="container bg secondary wy-5">
+        <article class="row row-cols-1 g-5">
+          <div class="col">
+            <div class="mb-3">
+              <div class="row g-0">
+                <div class="col-md-6 mb-3">
+                  <img
+                    src="/img/seguridad/galaxy.jpg"
+                    class="img-fluid rounded-start"
+                    alt="galaxy"
+                  />
+                </div>
+                <div class="col-md-6 gx-5">
+                  <div>
+                    <h3>Seguridad desde sus orígenes</h3>
+                    <p class="1h-base fs-5">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Vero placeat, molestias nisi eaque obcaecati incidunt
+                      facilis tenetur velit quo laborum, natus quibusdam,
+                      temporibus delectus totam fuga inventore. Mollitia,
+                      perferendis. Officiis, quod cupiditate. Sint
+                      exercitationem natus laborum iusto quia ipsum pariatur
+                      recusandae harum velit officia quaerat, illo explicabo
+                      commodi aspernatur ab, aliquid libero officiis aut!
+                      Tempora accusantium nam eveniet quis obcaecati alias esse
+                      similique, ullam blanditiis. Odit voluptatibus ut
+                      inventore. Impedit doloribus ducimus praesentium
+                      distinctio blanditiis nihil laborum, quis qui sed
+                      repellendus facere ullam cumque est esse dignissimos
+                      veniam assumenda totam?.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <div class="row g-0">
+                <div class="col-md-6 gx-5 mb-3 order-2 order-md-0">
+                  <h3>Notificaciones en tiempo real</h3>
+                  <p class="1h-base fs-5">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Eos accusamus quia quod. Omnis, odio quas quia expedita
+                    dignissimos qui praesentium similique voluptatibus deserunt,
+                    illum nesciunt ipsam totam labore nam est exercitationem?
+                    Non numquam dignissimos eius culpa, consectetur sit. Dolor
+                    quae velit ad dicta necessitatibus, libero voluptatem, odio
+                    incidunt ipsum deserunt impedit fugiat laborum debitis nobis
+                    at ipsa nisi optio! Temporibus, nemo! Aliquam est veniam eos
+                    unde. Explicabo enim sequi, amet consequuntur similique
+                    veniam, illo necessitatibus facere perferendis tenetur ab
+                    quos vel?.
+                  </p>
+                </div>
+                <div class="col-md-6 mb-2">
+                  <div>
+                    <img
+                      src="/img/seguridad/notification.jpg"
+                      class="img-fluid rounded-start"
+                      alt="notification"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <div class="row g-0">
+                <div class="col-md-6 mb-3">
+                  <img
+                    src="/img/seguridad/vault.jpg"
+                    class="img-fluid rounded-start"
+                    alt="vault"
+                  />
+                </div>
+                <div class="col-md-6 gx-5">
+                  <div>
+                    <h4>¿Perdiste tu celular o tarjeta?</h4>
+                    <p class="1h-base fs-5">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Accusamus ex sunt dolor tenetur, reiciendis error
+                      accusantium blanditiis odio beatae porro facilis eligendi
+                      quos provident perspiciatis, optio eaque? In magni itaque
+                      atque animi iusto, doloremque similique reprehenderit
+                      dignissimos non blanditiis deserunt rerum quam maxime at
+                      delectus inventore exercitationem quisquam nostrum tempora
+                      dicta dolor enim consequuntur. Facere aliquid quasi
+                      tempore soluta? Quam, fugit voluptatibus! Fugiat
+                      consequuntur eos numquam velit molestias, ea perferendis
+                      aliquid suscipit voluptatibus necessitatibus ex aperiam
+                      impedit architecto placeat accusantium ratione atque
+                      tempora hic ut, praesentium quod dolor.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!-- Ventana modal Suscripción -->
+    <div class="modal fade" tabindex="-1" id="ModalSuscripcion">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-secondary">
+          <div class="modal-header">
+            <h3 class="modal-title fs-1">Suscribete</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="fw-bold">
+              <span class="text-info fs-3">Únete a nuestro Newsletters!!</span>
+            </p>
+            <p class="text-light fw-ligh fs-3 lead">
+              <strong class="text-info fs-2 fw-bold">
+                Gym-Life Fitness Club</strong
+              >
+              te ofrece blog posts diarios, entrenamientos y planes
+              nutricionales personalizados para ayudarte a alcanzar tu
+              objetivo!
+            </p>
+            <form>
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailSuscripcion"
+                  aria-describedby="email para suscripción"
+                  placeholder="juanperez@gmail.com"
+                  required
+                />
+                <button
+                  class="btn btn-outline-info"
+                  type="submit"
+                  id="button-Suscripcion"
+                >
+                  <i class="far fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin de ventana modal -->
+    <!-- Footer -->
+    <footer class="bg_footer py-4">
+      <section class="container pb-5">
+        <div
+          class="
+            nav
+            align-items-center
+            justify-content-center justify-content-md-start
+          "
+        >
+          <a
+            class="nav-link active fuente_marca text-light px-0"
+            aria-current="page"
+            href="/index.html"
+          >
+            <img
+              src="/img/Gym-Life_Logo.png"
+              alt="Logo Gym Life Fitness club"
+              width="180"
+              height="auto"
+          /></a>
+        </div>
+        <article class="row mt-4">
+          <div
+            class="col-sm-12 col-md-3 text-light mb-3 text-center text-md-start"
+          >
+            <h3 class="fs-1">Seguinos</h3>
+            <ul
+              class="
+                nav
+                align-items-center
+                justify-content-center justify-content-md-start
+              "
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link text-secondary pe-1"
+                  href="https://m.facebook.com/?locale=es_ES"
+                  target="_blank"
+                >
+                  <i class="fab fa-facebook-square fa-2x"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-secondary pe-1"
+                  href="https://twitter.com/login?lang=es"
+                  target="_blank"
+                >
+                  <i class="fab fa-twitter-square fa-2x"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-secondary pe-2"
+                  href="https://www.instagram.com/?hl=es-la"
+                  target="_blank"
+                >
+                  <i class="fab fa-instagram-square fa-2x"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="text-light col-sm-12 col-md-3 mb-3 text-center text-md-start"
+          >
+            <h3 class="fs-1">Navegación</h3>
+            <ul
+              class="
+                nav
+                flex-column
+                align-items-center
+                justify-content-center
+                align-items-md-start
+                justify-content-md-start
+                fs-5
+              "
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-secondary link_padding-reset"
+                  aria-current="page"
+                  href="/pages/acerca_de_nosotros.html"
+                  >¿Quienes somos?</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-secondary link_padding-reset"
+                  href="/pages/galeria.html"
+                  >Galeria</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-secondary link_padding-reset"
+                  href="/pages/entrada_de_blog.html"
+                  >Blog</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-secondary link_padding-reset"
+                  href="/pages/error404.html"
+                  >FAQ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-secondary link_padding-reset"
+                  href="/pages/contacto.html"
+                  >Contáctanos</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="text-light col-sm-12 col-md-3 mb-4 text-center text-md-start"
+          >
+            <h3 class="fs-1">Servicios</h3>
+            <ul
+              class="
+                nav
+                flex-column
+                align-items-center align-items-md-start
+                justify-content-center justify-content-md-start
+                fs-5
+              "
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-secondary link_padding-reset"
+                  aria-current="page"
+                  href="/pages/error404.html"
+                  >Precios</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-secondary link_padding-reset"
+                  href="/pages/error404.html"
+                  >Clases</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-secondary link_padding-reset"
+                  href="/pages/error404.html"
+                  >Planes nutricionales</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-secondary link_padding-reset"
+                  href="/pages/error404.html"
+                  >Entrenamientos personales</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-secondary link_padding-reset"
+                  href="/pages/error404.html"
+                  >Servicios</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="text-light col-sm-12 col-md-3 mb-4 text-center text-md-start"
+          >
+            <h3 class="fs-1">Suscribete</h3>
+            <p class="fw-lighter fs-5">
+              <span class="text-info fs-5">Únete a nuestro Newsletters!!</span>
+            </p>
+            <p class="fw-lighter">
+              <strong class="text-info fs-5"> Gym-Life Fitness Club</strong> te
+              ofrece blog posts diarios, entrenamientos y planes nutricionales
+              personalizados para ayudarte a alcanzar tu objetivo!
+            </p>
+            <form>
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailSuscripcion"
+                  aria-describedby="email para suscripción"
+                  placeholder="juanperez@gmail.com"
+                  required
+                />
+                <button
+                  class="btn btn-outline-info"
+                  type="submit"
+                  id="button-Suscripcion"
+                >
+                  <i class="far fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </article>
+      </section>
+    </footer>
+    <!-- JavaScript min bootstrap -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- script animación scroll del navbar -->
+    <script src="/js/scroolled-nav.js"></script>
+  </body>
+</html>

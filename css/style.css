@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Teko:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Teko", sans-serif;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+body {
+  font-family: "Heebo", sans-serif;
+  background-color: #cccccc;
+}
+
+/*------------- botón login en topbar----------------------- */
+#login-btn {
+  color: rgb(0, 162, 255);
+}
+
+/*------------ botón suscribite en topbar------------------ */
+#btn-suscribite {
+  background: rgb(0, 162, 255);
+}
+
+/*------------ navbar transparente------------------------ */
+.bg-dark {
+  background: transparent !important;
+  transition: 0.75s;
+}
+/*----------- navbar con background al scrollear --------- */
+.bg-dark.scrolled {
+  background: rgb(40, 40, 40) !important;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: none;
+}
+/*-----------Fin navbar con background al scrollear ----- */
+
+/*---------- Barra debajo de los nav links--------------- */
+.barraNav-link::after {
+  content: " ";
+  width: 0%;
+  height: 6px;
+  background: rgb(0, 162, 255);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.barraNav-link:hover::after {
+  width: 100%;
+}
+
+/* --------- Fin Barra debajo de los nav links ---------*/
+
+/*----------- Animación botón hamburguesa --------------*/
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+}
+.navbar-toggler:hover {
+  background: transparent !important;
+}
+.navbar-toggler .icon-bar {
+  background: #fff;
+  height: 3px;
+  border-radius: 0px;
+  display: block;
+  width: 18px;
+  transition: all 0.2s;
+}
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 16% 270%;
+}
+.navbar-toggler .middle-bar {
+  opacity: 0;
+}
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 8% -180%;
+}
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+.nav-link {
+  font-weight: bold;
+  font-family: "Heebo", sans-serif;
+}
+/* ------- Fin Animación botón hamburguesa-------------*/
+
+/* --------Footer ------------------------------------ */
+.bg_footer {
+  background: rgb(40, 40, 40);
+}
+/* --------------------------------------------------- */
+
+/* ------------- Slider ---------------------------- */
+
+.carousel-caption {
+  font-family: "Teko", sans-serif;
+}
+
+.carousel-caption h4 {
+  color: rgb(0, 162, 255);
+  text-align: left;
+  opacity: 1;
+  animation: fadeIn 5.5s ease-in forwards;
+  animation: upDown-h4 4s 1s ease forwards;
+}
+
+.carousel-caption p {
+  font-weight: bold;
+  font-family: "Heebo", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-align: justify;
+  opacity: 1;
+  animation: fadeIn 4.5s ease-in forwards;
+  animation: upDown-p 2s 1s ease-in forwards;
+}
+
+.btn-slider {
+  color: rgb(0, 162, 255);
+  border: 2px solid rgb(0, 162, 255);
+  opacity: 0;
+  animation: fadeIn 4.5s ease-in forwards;
+}
+
+/* keyframes de animaciones de textos del slider */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes upDown-h4 {
+  100% {
+    margin-bottom: 0px;
+  }
+}
+@keyframes upDown-p {
+  100% {
+    margin-bottom: 0px;
+  }
+}
+
+/* color de los botones inferiores del slider */
+.carousel-dark .carousel-indicators [data-bs-target] {
+  background-color: rgb(0, 162, 255);
+}
+/* estilo de los botones inferiores del slider */
+.carousel-indicators [data-bs-target] {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+/* ------------banner principal-------------- */
+.banner {
+  background-image: url(/img/Banner.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 600px;
+}
+/* --------- 2do Banner pricipal ---- */
+.banner2 {
+  background-image: url(/img/Banner2.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 600px;
+}
+.opacity-06 {
+  opacity: 0.6;
+}
+/* -----------Tiulo Banner Principal--------- */
+
+.contenedorTituloBanner {
+  vertical-align: bottom;
+  text-align: left;
+  padding-bottom: 60px;
+}
+.titulo-banner {
+  margin-bottom: 0px;
+  position: relative;
+  font-family: "Teko", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 70px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  display: block;
+}
+/* ------------Breadcrumb de banner  -------------------- */
+.breadcrumb_li {
+  text-decoration: none;
+  padding-right: 20px;
+  color: white;
+  position: relative;
+  display: inline-block;
+  font-size: 42px;
+  font-family: "Teko", sans-serif;
+}
+/* ------------------Fin banner------------------------ */
+
+/* ----------------Body de pagina Login---------------- */
+
+.login {
+  background-color: #fff;
+  background-image: url("../img/16.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  overflow: visible;
+  width: 100%;
+  height: auto;
+}
+
+.bg-login{
+  background-color: rgb(40, 40, 40);
+}
+
+.div-video {
+  object-fit:cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*------ Configuración  de las medias queries ----------*/
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Slider */
+  .carousel-inner .carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    overflow: visible;
+    height: 80vh;
+  }
+}
+/*-------Media Queries Sidebar ----------------------- */
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0px; /* ajusta height del navbar */
+    left: 0;
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 75%;
+    height: 100%;
+  }
+
+  .navbar-collapse.collapsing {
+    left: -75%;
+    transition: height 0s ease;
+  }
+
+  .navbar-collapse.show {
+    left: 0;
+    background: rgb(0, 162, 255);
+    transition: left 300ms ease-in-out;
+  }
+
+  .navbar-toggler.collapsed ~ .navbar-collapse {
+    transition: left 500ms ease-in-out;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    text-transform: uppercase;
+  }
+}
+/* ------------------------------------------------- */
+
+/*-Media Queries para dispositivos xl, xxl: Algunas Tablet, notebook, tv --*/
+
+@media all and (min-width: 993px) {
+  /* botón de login en side bar */
+  #login-cel {
+    display: none;
+  }
+  /* botón suscribite en side bar */
+  #subscribe-cel {
+    display: none;
+  }
+
+  /*--Titulo de Slider para pantallas grandes-- */
+  .carousel-caption h4 {
+    font-size: 40px !important;
+    margin-bottom: 320px;
+  }
+  /*--Párrafo de Slider para pantallas grandes-- */
+  .carousel-caption p {
+    font-size: 70px !important;
+    margin-bottom: 680px;
+  }
+  /*--Botón de Slider para pantallas grandes-- */
+  .btn-slider {
+    width: 250px;
+    height: auto;
+    padding: 30px;
+    display: flex;
+    font-size: 45px !important;
+    font-weight: bolder;
+  }
+}
+/*----- Media Queries para dispositivos Large: Tablet */
+@media all and (min-width: 769px) and (max-width: 992px) {
+  /* Slider */
+  .carousel-inner .carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    overflow: visible;
+    height: 57vh;
+  }
+}
+
+/*------ Media Queries para dispositivos Medium: celulares ---------*/
+
+@media all and (min-width: 576px) and (max-width: 768px) {
+  /* LOGO Navbar */
+  .navbar-brand img {
+    width: 150px;
+  }
+  /* topbar del navbar*/
+  #login-btn {
+    display: none;
+  }
+  /* botón sucribite */
+  #btn-suscribite {
+    display: none;
+  }
+
+  /* Slider */
+  .carousel-inner .carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    overflow: visible;
+    height: 57vh;
+  }
+  /* textos del slider */
+  .carousel-caption h4 {
+    margin-bottom: -800px;
+    font-size: 10px;
+  }
+  .carousel-caption p {
+    margin-bottom: -9000px;
+    font-size: 15px;
+  }
+  .btn-slider {
+    margin-bottom: 0px;
+    width: 75px;
+    padding: 3px;
+    margin: 15px 0px;
+    font-size: 15px;
+  }
+}
+
+/*------ Media Queries para dispositivos extra small ---*/
+@media all and (min-width: 319px) and (max-width: 575px) {
+  /* LOGO Navbar */
+  .navbar-brand img {
+    width: 100px;
+  }
+  /* topbar del navbar*/
+  #login-btn {
+    display: none;
+  }
+  /* botón sucribite */
+  #btn-suscribite {
+    display: none;
+  }
+  .carousel-inner .carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    overflow: visible;
+    height: 70vh;
+  }
+}
+
+/* ----------- Samsung Galaxy-Fold----------- */
+@media (max-device-width: 280px) and (max-device-height: 653px) {
+  /* LOGO Navbar */
+  .navbar-brand img {
+    width: 130px;
+  }
+  /* topbar del navbar*/
+  #login-btn {
+    display: none;
+  }
+  /* botón sucribite */
+  #btn-suscribite {
+    display: none;
+  }
+  .carousel-inner .carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    overflow: visible;
+    height: 80vh;
+    width: auto;
+  }
+}
