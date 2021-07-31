@@ -67,7 +67,6 @@ h6 {
   }
 }
 
-
 body {
   font-family: "Heebo", sans-serif;
   background-color: #cccccc;
@@ -86,12 +85,15 @@ a {
   text-decoration: none;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   outline: 0px none;
   text-decoration: none;
 }
 
-a:active, a:hover, a:focus {
+a:active,
+a:hover,
+a:focus {
   color: white;
 }
 
@@ -328,8 +330,8 @@ img {
 .bg-img {
   background-color: transparent;
   background-image: url("../img/escudo.png");
-  background-size:contain;
-  background-position:top;
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   background-origin: border-box;
   overflow: visible;
@@ -338,7 +340,7 @@ img {
   height: 55vh;
 }
 
-#div-404{
+#div-404 {
   width: 1200px;
   height: 800px;
 }
@@ -350,7 +352,7 @@ img {
 .div-video {
   object-fit: cover;
   object-position: center;
- /*  width: 100%;
+  /*  width: 100%;
   height: 100%; */
   width: 100vw;
   height: 100vh;
@@ -360,34 +362,45 @@ img {
 }
 
 .login-panel {
-  position: absolute; 
-  top: 10px;
-  left: 10px; 
+  position: absolute;
+  top: 0px;
+  left: 0px;
   z-index: 2;
-  height: 50vh;
-  width: 50vw;
+  height: 100vh;
+  width: 100vw;
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  opacity: 0.8;
 }
 
 .login-panel2 {
-
   z-index: 1;
 }
 
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
 
-.link-login{
+.link-login {
   color: rgb(0, 162, 255);
   outline: 0px none;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: bolder;
 }
 
-#freeRegister:hover{
+#freeRegister:hover {
   color: rgb(0, 135, 212);
 }
-
-
 
 /*------ Configuración  de las medias queries ----------*/
 /* ----------- iPad Pro 12.9" ----------- */
