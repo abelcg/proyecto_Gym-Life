@@ -4,6 +4,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 h1,
@@ -326,7 +327,7 @@ img {
 /* ------------------Fin banner------------------------ */
 
 /* ----------------Pagina Login---------------- */
-
+/* imagen de fondo del panel derecho */
 .bg-img {
   background-color: transparent;
   background-image: url("../img/escudo.png");
@@ -340,27 +341,20 @@ img {
   height: 55vh;
 }
 
-#div-404 {
-  width: 1200px;
-  height: 800px;
-}
-
 .bg-login {
   background-color: rgb(40, 40, 40);
 }
-
+/* video de fondo */
 .div-video {
   object-fit: cover;
   object-position: center;
-  /*  width: 100%;
-  height: 100%; */
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   margin: 0px;
   padding: 0px;
 }
-
+/* panel de login con background transparente y con gradient de color */
 .login-panel {
   position: absolute;
   top: 0px;
@@ -382,14 +376,15 @@ img {
   opacity: 0.8;
 }
 
+/* permite que el video se vea por debajo del panel de login */
 .login-panel2 {
   z-index: 1;
 }
-
+/* pointer del boton eye del password */
 .cursor-pointer {
   cursor: pointer;
 }
-
+/* estilo de los links del panel de login */
 .link-login {
   color: rgb(0, 162, 255);
   outline: 0px none;
@@ -401,6 +396,46 @@ img {
 #freeRegister:hover {
   color: rgb(0, 135, 212);
 }
+/* --------Fin del login ------------------------------ */
+
+/* Galeria de imágenes .................................*/
+
+.efectoimg {
+  filter: opacity(0.3);
+  transition: 0.5s;
+}
+
+.imagen:hover {
+  filter: opacity(100);
+  transition: 0.5s;
+}
+/* contorno de los titulos de la galeria*/
+.contorno {
+  -webkit-text-stroke: 1.5px rgb(0, 162, 255);
+}
+
+/* Fin de Galeria de imágenes-------------------------- */
+
+/* ERROR 404------------------------------------------ */
+.bg-img-404{
+  background-color: white;
+  background-image: url("../img/ERROR404/lesionado.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  overflow: hidden;
+  width: fit-content;
+  width: 100%;
+  height: auto;
+}
+
+#div-404 {
+  width: 100vw;
+  height: auto;
+}
+/* Fin ERROR 404 --------------------------------------*/
+
 
 /*------ Configuración  de las medias queries ----------*/
 /* ----------- iPad Pro 12.9" ----------- */
