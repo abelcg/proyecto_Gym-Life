@@ -51,6 +51,7 @@
     ></script>
     <!-- script de jquery -->
     <script src="../js/jquery-3.6.0.min.js"></script>
+    <!-- page title -->
     <title>Gym Life-Login</title>
   </head>
   <body>
@@ -116,12 +117,7 @@
           <div class="collapse navbar-collapse" id="navbarSidebar">
             <ul class="navbar-nav ms-auto mb-3 mb-lg-1 fs-3">
               <li class="nav-item">
-                <a
-                  class="nav-link active barraNav-link"
-                  aria-current="page"
-                  href="/index.html"
-                  >Inicio</a
-                >
+                <a class="nav-link barraNav-link" href="/index.html">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link barraNav-link" href="/pages/contacto.html"
@@ -137,9 +133,10 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link text-dark fs-5"
+                  class="nav-link active text-dark fs-5"
                   id="login-cel"
                   href="/pages/login.html"
+                  aria-current="page"
                   >Login</a
                 >
                 <a
@@ -187,17 +184,263 @@
       </div>
       <!-- Fin del Banner Principal -->
       <!-- Section Login con video de fondo -->
-      <section class="bg-login">
-          <div class="container-fluid m-0 p-0">
-            <video
-              class="div-video"
-              autoplay="autoplay"
-              loop="loop"
-              src="../assets/girl-trainning.mp4"
-              muted="muted"
-              poster="../img/16.jpg"
-            ></video>
+      <section class="bg-login position-relative">
+        <!-- ---Video background -->
+        <!--  <div class="container-fluid m-0 p-0">
+          <video
+            class="div-video login-panel2"
+            autoplay="autoplay"
+            loop="loop"
+            src="../assets/girl-trainning.mp4"
+            muted="muted"
+            poster="../img/16.jpg"
+          ></video>
+        </div> -->
+        <!-- --Panel de Login -->
+        <div class="bg-light text-center">
+          <div class="row g-0">
+            <div class="col-sm-5">
+              <div>
+                <ul class="nav nav-tabs" role="tablist" id="myLoginTab">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active bg-transparent text-info"
+                      data-toggle="tab"
+                      role="tab"
+                      aria-selected="true"
+                      href="#login"
+                      ><span>Inicia Sesión</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link bg-transparent text-info"
+                      data-toggle="tab"
+                      role="tab"
+                      aria-selected="false"
+                      href="#register"
+                      ><span>Regístrate</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div
+                    class="tab-pane fade active show"
+                    role="tabpanel"
+                    id="login"
+                  >
+                    <h5 class="fs-3 my-4">Inicia Sesión en tu Cuenta</h5>
+                    <p class="mb-6 fs-5">
+                      ¿No tienes una cuenta?
+                      <a href="" id="freeRegister">Regístrate gratis!</a>
+                    </p>
+                    <form class="p-4">
+                      <div class="form-group">
+                        <div class="input-group input-group-sm mb-3">
+                          <span
+                            class="input-group-text text-info text-center ps-4"
+                            id="inputGroup-email"
+                            ><i class="fas fa-at fa-2x"></i
+                          ></span>
+                          <input
+                            required
+                            type="email"
+                            class="form-control"
+                            name="email"
+                            maxlength="20"
+                            placeholder="juanperez@gmail.com"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group password-field">
+                        <div class="input-group input-group-sm mb-3">
+                          <span
+                            class="input-group-text text-info px-3"
+                            id="inputGroup-password"
+                            ><i class="fas fa-lock fa-2x"></i
+                          ></span>
+                          <input
+                            required
+                            type="password"
+                            class="form-control"
+                            name="password"
+                            id="password"
+                            maxlength="20"
+                            placeholder="Ingresa tu clave personal"
+                          />
+                          <div class="cursor-pointer">
+                            <span
+                              class="input-group-text text-info"
+                              id="inputGroup-email"
+                              ><i class="far fa-eye fa-2x"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div
+                          class="col-12 col-md-6 d-flex justify-content-center"
+                        >
+                          <button type="submit" class="btn btn-info btn-block">
+                            Inicia Sesión
+                          </button>
+                        </div>
+                        <div
+                          class="
+                            col-12 col-md-6
+                            mt-3
+                            d-flex
+                            align-items-center
+                            justify-content-center
+                          "
+                        >
+                          <a
+                            class="btn btn-link link-login"
+                            data-bs-toggle="modal"
+                            data-bs-target="#ModalRecuperarClave"
+                            >¿No recuerdas tu clave?</a
+                          >
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="pt-4 fs-5">
+                        <p>o inicia sesión con</p>
+                      </div>
+                      <div class="d-flex justify-content-center mx-4">
+                        <a
+                          class="nav-link text-info pe-1"
+                          href="/pages/error404.html"
+                          target="_blank"
+                        >
+                          <i class="fab fa-facebook-square fa-3x"></i>
+                        </a>
+                        <a
+                          class="nav-link text-info pe-1"
+                          href="/pages/error404.html"
+                          target="_blank"
+                        >
+                          <i class="fab fa-twitter-square fa-3x"></i>
+                        </a>
+                        <a
+                          class="nav-link text-info pe-2"
+                          href="/pages/error404.html"
+                          target="_blank"
+                        >
+                          <i class="fab fa-google fa-3x"></i>
+                        </a>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-pane fade" role="tabpanel" id="register">
+                    <p class="m-5 fs-5">
+                      Ingresa tu información para crear tu Nueva Cuenta
+                    </p>
+                    <strong class="fs-3 text-center text-info"
+                      >Gym-Life Fitness Club</strong
+                    >
+                    <form class="my-4 p-4">
+                      <div class="form-group mb-3">
+                        <div class="input-group">
+                          <div class="d-flex">
+                            <span
+                              class="
+                                input-group-text
+                                text-info text-center
+                                ps-3
+                              "
+                              ><i class="far fa-eye fa-2x"></i
+                            ></span>
+                          </div>
+                          <input
+                            required
+                            class="form-control"
+                            name="email"
+                            type="email"
+                            maxlength="20"
+                            placeholder="juanperez@gmail.com"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group password-field">
+                        <div class="input-group">
+                          <div class="d-flex">
+                            <span class="input-group-text text-info px-3"
+                              ><i class="fas fa-lock fa-2x"></i
+                            ></span>
+                          </div>
+                          <input
+                            required
+                            class="form-control"
+                            name="password"
+                            id="password"
+                            type="password"
+                            maxlength="20"
+                            placeholder="ingresa tu clave"
+                          />
+                          <div class="d-flex cursor-pointer">
+                            <span class="input-group-text text-info"
+                              ><i class="far fa-eye fa-2x"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <button type="submit" class="btn btn-info btn-block my-4">
+                            Registro
+                          </button>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="pt-10 pb-4">
+                        <p>o registrate con</p>
+                        <div class="d-flex justify-content-center mx-4">
+                          <a
+                            class="nav-link text-info pe-1"
+                            href="/pages/error404.html"
+                            target="_blank"
+                          >
+                            <i class="fab fa-facebook-square fa-3x"></i>
+                          </a>
+                          <a
+                            class="nav-link text-info pe-1"
+                            href="/pages/error404.html"
+                            target="_blank"
+                          >
+                            <i class="fab fa-twitter-square fa-3x"></i>
+                          </a>
+                          <a
+                            class="nav-link text-info pe-2"
+                            href="/pages/error404.html"
+                            target="_blank"
+                          >
+                            <i class="fab fa-google fa-3x"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                col-sm-7
+                text-light
+                bg-transparent
+                d-none d-md-flex
+                justify-content-center
+                align-items-center
+              "
+              id="login-panelDerecho"
+            >
+              <div class="bg-img shadow-lg d-flex flex-column justify-content-center align-items-center">
+                <h5 class="fs-1">Bienvenidos a</h5>
+                <h4 class="fs-1">Gym-Life Fitness club</h4>
+              </div>
+            </div>
           </div>
+        </div>
       </section>
       <!-- Fin Section Login con video de fondo -->
     </main>
@@ -216,15 +459,14 @@
           </div>
           <div class="modal-body">
             <p class="fw-bold">
-              <span class="text-info fs-3">Únete a nuestro Newsletters!!</span>
+              <span class="text-info fs-2">Únete a nuestro Newsletters!!</span>
             </p>
             <p class="text-light fw-ligh fs-3 lead">
               <strong class="text-info fs-2 fw-bold">
                 Gym-Life Fitness Club</strong
               >
               te ofrece blog posts diarios, entrenamientos y planes
-              nutricionales personalizados para ayudarte a alcanzar tu
-              objetivo!
+              nutricionales personalizados para ayudarte a alcanzar tu objetivo!
             </p>
             <form>
               <div class="input-group">
@@ -234,6 +476,7 @@
                   id="emailSuscripcion"
                   aria-describedby="email para suscripción"
                   placeholder="juanperez@gmail.com"
+                  maxlength="20"
                   required
                 />
                 <button
@@ -249,7 +492,50 @@
         </div>
       </div>
     </div>
-    <!-- Fin de ventana modal -->
+    <!-- Fin de ventana modal suscripción -->
+    <!-- Ventana modal Recuperar Clave -->
+    <div class="modal fade" tabindex="-1" id="ModalRecuperarClave">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-secondary">
+          <div class="modal-header">
+            <h3 class="modal-title fs-1">Recupera tu Clave</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-light fw-ligh fs-3 lead">
+              Por favor ingresa tu email de registro y te enviaremos tu link de
+              cambio de password
+            </p>
+            <form>
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailRegistro"
+                  aria-describedby="email para suscripción"
+                  placeholder="juanperez@gmail.com"
+                  maxlength="20"
+                  required
+                />
+                <button
+                  class="btn btn-outline-info"
+                  type="submit"
+                  id="button-Suscripcion"
+                >
+                  <i class="far fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin ventana modal Recuperar Clave -->
     <!-- Footer -->
     <footer class="bg_footer py-4">
       <section class="container pb-5">
@@ -282,6 +568,7 @@
                 nav
                 align-items-center
                 justify-content-center justify-content-md-start
+                fs-6
               "
             >
               <li class="nav-item">
@@ -437,6 +724,7 @@
                   id="emailSuscripcion"
                   aria-describedby="email para suscripción"
                   placeholder="juanperez@gmail.com"
+                  maxlength="20"
                   required
                 />
                 <button
@@ -456,5 +744,7 @@
     <script src="/js/bootstrap.min.js"></script>
     <!-- script animación scroll del navbar -->
     <script src="/js/scroolled-nav.js"></script>
+    <!-- script tabbable tabs -->
+    <script src="../js/triggerTap-showPasswrd.js"></script>
   </body>
 </html>

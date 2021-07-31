@@ -16,9 +16,90 @@ h6 {
   line-height: 1.1;
   text-transform: uppercase;
 }
+
+h3 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+h1 {
+  font-size: 72px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 66px;
+  font-weight: 700;
+  letter-spacing: 7px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+h4 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 400;
+}
+@media (max-width: 991px) {
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  h5 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+
+
 body {
   font-family: "Heebo", sans-serif;
   background-color: #cccccc;
+  margin: 0px;
+  padding: 0px;
+  color: rgb(40, 40, 40);
+  font-weight: 400;
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
+  font-size: 18px;
+}
+a {
+  color: rgb(0, 162, 255);
+  outline: 0px none;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  outline: 0px none;
+  text-decoration: none;
+}
+
+a:active, a:hover, a:focus {
+  color: white;
+}
+
+img {
+  border-style: none;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 /*------------- botón login en topbar----------------------- */
@@ -46,7 +127,7 @@ body {
 }
 /*-----------Fin navbar con background al scrollear ----- */
 
-/*---------- Barra debajo de los nav links--------------- */
+/*---------- Barra debajo de los nav links del navbar--------------- */
 .barraNav-link::after {
   content: " ";
   width: 0%;
@@ -58,6 +139,10 @@ body {
 }
 .barraNav-link:hover::after {
   width: 100%;
+}
+
+.navbar-nav .nav-link.active {
+  color: rgb(0, 135, 212) !important;
 }
 
 /* --------- Fin Barra debajo de los nav links ---------*/
@@ -225,41 +310,84 @@ body {
 .breadcrumb_li {
   text-decoration: none;
   padding-right: 20px;
-  color: white;
   position: relative;
   display: inline-block;
   font-size: 42px;
   font-family: "Teko", sans-serif;
 }
+.breadcrumb-item.active {
+  color: #ffffff69;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #ffffff69;
+}
 /* ------------------Fin banner------------------------ */
 
-/* ----------------Body de pagina Login---------------- */
+/* ----------------Pagina Login---------------- */
 
-.login {
-  background-color: #fff;
-  background-image: url("../img/16.jpg");
-  background-size: cover;
-  background-position: center;
+.bg-img {
+  background-color: transparent;
+  background-image: url("../img/escudo.png");
+  background-size:contain;
+  background-position:top;
   background-repeat: no-repeat;
   background-origin: border-box;
   overflow: visible;
-  width: 100%;
-  height: auto;
+  width: fit-content;
+  width: 55vw;
+  height: 55vh;
 }
 
-.bg-login{
+#div-404{
+  width: 1200px;
+  height: 800px;
+}
+
+.bg-login {
   background-color: rgb(40, 40, 40);
 }
 
 .div-video {
-  object-fit:cover;
+  object-fit: cover;
   object-position: center;
-  width: 100%;
-  height: 100%;
+ /*  width: 100%;
+  height: 100%; */
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   margin: 0px;
   padding: 0px;
 }
+
+.login-panel {
+  position: absolute; 
+  top: 10px;
+  left: 10px; 
+  z-index: 2;
+  height: 50vh;
+  width: 50vw;
+}
+
+.login-panel2 {
+
+  z-index: 1;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.link-login{
+  color: rgb(0, 162, 255);
+  outline: 0px none;
+  text-decoration: none;
+}
+
+#freeRegister:hover{
+  color: rgb(0, 135, 212);
+}
+
+
 
 /*------ Configuración  de las medias queries ----------*/
 /* ----------- iPad Pro 12.9" ----------- */
