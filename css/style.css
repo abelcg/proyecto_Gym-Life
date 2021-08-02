@@ -70,7 +70,6 @@ h6 {
 
 body {
   font-family: "Heebo", sans-serif;
-  /* background-color: #cccccc; */
   margin: 0px;
   padding: 0px;
   color: rgb(40, 40, 40);
@@ -589,6 +588,10 @@ img {
     padding: 3px;
     margin: 15px 0px;
     font-size: 15px;
+  }
+  /* texto  colkumnas categorías */
+  #categorias {
+    font-size: 15px !important;
   }
 }
 

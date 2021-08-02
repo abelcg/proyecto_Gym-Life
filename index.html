@@ -272,11 +272,16 @@
                 class="card-img-top"
                 alt="Hombre realizando plancha de calistenia"
               />
-              <div class="card-body">
-                <div>
+              <div class="card-body p-5">
+                <div class="d-flex">
                   <ul class="fechaPost">
                     <li>
                       <i class="fa fa-calendar fa-1x me-2"></i>27 julio, 2021
+                    </li>
+                  </ul>
+                  <ul class="fechaPost">
+                    <li>
+                      <i class="fa fa-dot-circle fa-1x mx-2"></i>Calistenia
                     </li>
                   </ul>
                 </div>
@@ -326,10 +331,15 @@
               />
               <div class="card-body">
                 <div class="card-body">
-                  <div>
+                  <div class="d-flex">
                     <ul class="fechaPost">
                       <li>
                         <i class="fa fa-calendar fa-1x me-2"></i>25 julio, 2021
+                      </li>
+                    </ul>
+                    <ul class="fechaPost">
+                      <li>
+                        <i class="fa fa-dot-circle fa-1x mx-2"></i>Culturismo
                       </li>
                     </ul>
                   </div>
@@ -373,11 +383,14 @@
               />
               <div class="card-body">
                 <div class="card-body">
-                  <div>
+                  <div class="d-flex">
                     <ul class="fechaPost">
                       <li>
                         <i class="fa fa-calendar fa-1x me-2"></i>24 julio, 2021
                       </li>
+                    </ul>
+                    <ul class="fechaPost">
+                      <li><i class="fa fa-dot-circle fa-1x mx-2"></i>Cardio</li>
                     </ul>
                   </div>
                   <h3 class="card-title fs-1 my-2">
@@ -421,10 +434,15 @@
               />
               <div class="card-body">
                 <div class="card-body">
-                  <div>
+                  <div class="d-flex">
                     <ul class="fechaPost">
                       <li>
                         <i class="fa fa-calendar fa-1x me-2"></i>24 julio, 2021
+                      </li>
+                    </ul>
+                    <ul class="fechaPost">
+                      <li>
+                        <i class="fa fa-dot-circle fa-1x mx-2"></i>Halterofilia
                       </li>
                     </ul>
                   </div>
@@ -490,7 +508,7 @@
               <h3 class="fs-1">Buscar</h3>
               <form class="form-inline mb-3 me-3 p-4">
                 <input
-                  class="form-control me-5 p-4"
+                  class="form-control form-control-sm me-5 p-4"
                   type="text"
                   placeholder="Buscar"
                   aria-label="Buscar"
@@ -507,9 +525,12 @@
             <!-- Categorias -->
             <div class="bg-light p-4 my-5">
               <h3 class="fs-1 mt-4">Categorias</h3>
-              <ul class="list-group list-group-flush fs-2 fw-bold">
+              <ul
+                class="list-group list-group-flush fs-2 fw-bold"
+                id="categorias"
+              >
                 <a
-                  href="/pages/error404.html"
+                  href="/pages/entrada_de_blog.html"
                   class="
                     list-group-item list-group-item-action
                     d-flex
@@ -593,28 +614,6 @@
                   >Crossfit
                   <span class="badge bg-info rounded-pill">11</span></a
                 >
-                <a
-                  href="/pages/error404.html"
-                  class="
-                    list-group-item list-group-item-action
-                    d-flex
-                    justify-content-between
-                    align-items-center
-                  "
-                  >Suplemento
-                  <span class="badge bg-info rounded-pill">07</span></a
-                >
-                <a
-                  href="/pages/error404.html"
-                  class="
-                    list-group-item list-group-item-action
-                    d-flex
-                    justify-content-between
-                    align-items-center
-                  "
-                  >Halterofilia
-                  <span class="badge bg-info rounded-pill">04</span></a
-                >
               </ul>
             </div>
             <!-- Publicidad -->
@@ -626,7 +625,7 @@
               />
             </div>
             <!-- TAGS -->
-            <div class="bg-light p-4 my-5">
+            <div class="bg-light p-2 my-5">
               <h3 class="fs-1 mt-4">TAGS</h3>
               <div
                 class="d-flex justify-content-between flex-wrap"
@@ -645,7 +644,7 @@
                   href="/pages/error404.html"
                   type="button"
                   class="btn btn-outline-dark fs-2 fw-bold text-uppercase"
-                  >Fisicoculturismo</a
+                  >Culturismo</a
                 >
                 <a
                   href="/pages/error404.html"
@@ -687,13 +686,7 @@
                   href="/pages/error404.html"
                   type="button"
                   class="btn btn-outline-dark fs-2 fw-bold text-uppercase"
-                  >Suplementos</a
-                >
-                <a
-                  href="/pages/error404.html"
-                  type="button"
-                  class="btn btn-outline-dark fs-2 fw-bold text-uppercase"
-                  >Halterofilia</a
+                  >Suplemento</a
                 >
               </div>
             </div>
@@ -702,7 +695,7 @@
               <h3 class="fs-1 mt-4">Post populares</h3>
               <div class="card mb-3">
                 <div class="row g-0">
-                  <div class="col-md-4">
+                  <div class="col-md-12">
                     <a href="/pages/entrada_de_blog.html">
                       <img
                         src="/img/fitness-balancing.jpg"
@@ -712,11 +705,11 @@
                       />
                     </a>
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-12">
                     <div class="card-body">
                       <a href="/pages/entrada_de_blog.html" class="text-dark">
                         <h5 class="card-title">
-                          CALISTENIA: DESARROLLE MASA MUSCULAR USANDO SOLO SU
+                          CALISTENIA-DESARROLLE MASA MUSCULAR USANDO SOLO SU
                           PESO CORPORAL
                         </h5>
                       </a>
@@ -729,7 +722,7 @@
               </div>
               <div class="card mb-3">
                 <div class="row g-0">
-                  <div class="col-md-4">
+                  <div class="col-md-12">
                     <a href="/pages/error404.html">
                       <img
                         src="/img/image-2.jpg"
@@ -739,7 +732,7 @@
                       />
                     </a>
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-12">
                     <div class="card-body">
                       <a href="/pages/error404.html" class="text-dark">
                         <h5 class="card-title">
@@ -756,7 +749,7 @@
               </div>
               <div class="card mb-3">
                 <div class="row g-0">
-                  <div class="col-md-4">
+                  <div class="col-md-12">
                     <a href="/pages/error404.html">
                       <img
                         src="/img/stationary-bike-workout.jpg"
@@ -766,7 +759,7 @@
                       />
                     </a>
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-12">
                     <div class="card-body">
                       <a href="/pages/error404.html" class="text-dark">
                         <h5 class="card-title">
@@ -782,7 +775,7 @@
               </div>
               <div class="card mb-3">
                 <div class="row g-0">
-                  <div class="col-md-4">
+                  <div class="col-md-12">
                     <a href="/pages/error404.html">
                       <img
                         src="/img/Gym.jpg"
@@ -792,7 +785,7 @@
                       />
                     </a>
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-12">
                     <div class="card-body">
                       <a href="/pages/error404.html" class="text-dark">
                         <h5 class="card-title">
