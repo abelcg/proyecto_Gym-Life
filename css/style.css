@@ -324,7 +324,7 @@ img {
   font-family: "Teko", sans-serif;
   color: #fff;
   font-weight: 700;
-  font-size: 80px;
+  font-size: 62px;
   line-height: 70px;
   text-transform: uppercase;
   -webkit-text-stroke: 1px rgb(255, 255, 255);
@@ -419,6 +419,43 @@ img {
   color: rgb(0, 135, 212);
 }
 /* --------Fin del login ------------------------------ */
+/* ----contacto---------------------------------------- */
+.bg-black{
+  background: black;
+}
+
+#titulo-contacto {
+  font-family: "Teko", sans-serif;
+  text-transform: uppercase;
+  font-size: 66px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  color: black;
+  font-size: calc(1.375rem + 1.5vw) !important;
+}
+
+#horario{
+  font-family: "Teko", sans-serif;;
+}
+
+.icon {
+  font-size: 45px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+.cards:hover {
+  position: relative;
+  right: 5px;
+  bottom: 5px;
+}
+
+label {
+  font-family: "Teko", sans-serif;
+  text-transform: uppercase;
+}
+/* ---FIN CONTACTO------------------------------------- */
 
 /* Galeria de imágenes .................................*/
 
@@ -637,5 +674,9 @@ img {
     overflow: visible;
     height: 80vh;
     width: auto;
+  }
+  /* titulo de banner */
+  .titulo-banner{
+    font-size: 45px;
   }
 }
