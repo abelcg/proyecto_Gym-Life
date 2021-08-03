@@ -456,6 +456,10 @@ label {
   text-transform: uppercase;
 }
 /* ---FIN CONTACTO------------------------------------- */
+/* página acerca de nosotros-------------------------- */
+ .sombra{
+  box-shadow: 0 .5rem 1rem rgba(255, 255, 255,0.5);
+ }
 
 /* Galeria de imágenes .................................*/
 
