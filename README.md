@@ -2,6 +2,6 @@
 
 Es un blog realizado con Bootstrap 5. 
 
-✨ [Demo]("https://gym-life-blog.netlify.app/index.html")
+## ✨ [Demo]("https://gym-life-blog.netlify.app/index.html")
 
 
